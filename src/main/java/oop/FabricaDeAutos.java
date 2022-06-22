@@ -4,7 +4,7 @@ public class FabricaDeAutos {
 
 	public static void main(String[] args) {
 
-		Auto fiatUno = new Auto();
+		Auto fiatUno = new Auto(300f,"AUTO",new Motor("motor",300f));
 		
 		fiatUno.encender();
 		fiatUno.verVelocidad();//0
