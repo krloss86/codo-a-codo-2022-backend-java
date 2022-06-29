@@ -30,17 +30,20 @@
 		
 		<!-- agrego dependencia para poder usar los controller con tecnología servlet-->
 		<dependency>
-		    <groupId>jakarta.servlet</groupId>
-		    <artifactId>jakarta.servlet-api</artifactId>
-		    <version>5.0.0</version>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>javax.servlet-api</artifactId>
+		    <version>4.0.1</version>
 		    <scope>provided</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
 		<dependency>
-		    <groupId>jakarta.servlet.jsp</groupId>
-		    <artifactId>jakarta.servlet.jsp-api</artifactId>
-		    <version>3.0.0</version>
+		    <groupId>javax.servlet.jsp</groupId>
+		    <artifactId>javax.servlet.jsp-api</artifactId>
+		    <version>2.3.3</version>
 		    <scope>provided</scope>
 		</dependency>		
 	</dependencies>
+	<build>
+		<finalName>codoacodo-back</finalName>
+	</build>
 </project>
