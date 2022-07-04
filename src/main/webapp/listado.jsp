@@ -11,7 +11,7 @@
 			<%@include file="navbar.jsp" %>
 			<div class="container">
 				<section>
-					<h1>Alta</h1>
+					<h1>Listado</h1>
 					<table class="table">
 					  <thead>
 					    <tr>
@@ -19,6 +19,7 @@
 					      <th scope="col">NOMBRE</th>
 					      <th scope="col">PRECIO</th>
 					      <th scope="col">C&Oacute;DIGO</th>
+					      <th scope="col">&nbsp;</th>
 					    </tr>
 					  </thead>
 					  <% 
@@ -37,6 +38,10 @@
 					      <td><%=unProducto.getNombre() %></td>
 					      <td><%=unProducto.getPrecio() %></td>
 					      <td><%=unProducto.getCodigo() %></td>
+					      <td>
+					      	<a class="btn btn-danger" href="<%=request.getContextPath()%>/api/EliminarController?id=<%=unProducto.getIdProducto()%>" role="button">Eliminar</a> | 
+					      	<a class="btn btn-secondary" href="<%=request.getContextPath()%>/api/EditarController?id=<%=unProducto.getIdProducto()%>" role="button">Editar</a>
+					      </td>
 					    </tr>
 					   <%
 					   	}

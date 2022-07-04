@@ -34,7 +34,7 @@ public class CreateController extends HttpServlet {
 		if(con != null) { 
 			// insert en la db > SQL: INSERT INTO....
 			String sql = "INSERT INTO PRODUCTO (nombre, precio,fecha_creacion,imagen,codigo) ";
-			sql += "VALUES('"+nombre+"',"+precio+",CURDATE(),'"+imagen+"','"+codigo+"')";
+			sql += "VALUES('"+nombre+"',"+precio+",CURRENT_DATE,'"+imagen+"','"+codigo+"')";
 			
 			//control de errores
 			try {
