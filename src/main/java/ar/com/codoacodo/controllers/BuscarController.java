@@ -12,18 +12,20 @@ import javax.servlet.http.HttpServletResponse;
 import ar.com.codoacodo.daos.ProductoDAO;
 import ar.com.codoacodo.dto.Producto;
 
-@WebServlet("/api/ListadoController")
-public class ListadoController extends HttpServlet {
+@WebServlet("/api/BuscarController")
+public class BuscarController extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		//crear la instancia DE ProductoDAO
+		String clave = req.getParameter("clave");
+		
+		//Crear ProductoDAO
 		ProductoDAO dao = new ProductoDAO();
 		
-		//invocar al metodo listarProductos()
-		List<Producto> listado = dao.listarProductos();
+		//invocar el metodo buscar(clave)
+		List<Producto> listado = dao.buscar(clave);
 		
-		//grabar el listado en el request para que lo vea la siguiente pagina
+		//guardar en el request el producto
 		req.setAttribute("listado", listado);
 		
 		//ir a la siguiente pagina
